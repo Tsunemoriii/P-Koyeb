@@ -23,7 +23,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from bot import C1 as cli
 from bot.plugins import help_text_1 as help_text, start_text_1 as start_text
-from bot.utils.config import AUTH_USERS, SHORTENER_API, SHORTENER_WEB, DOUBLE_SHORT, DOUBLE_SHORT_WEB, DOUBLE_SHORT_API
+from bot.utils.config import AUTH_USERS, SHORTENER_API, SHORTENER_WEB
 from bot.utils.database import db
 from bot.utils.logger import Logger
 from bot.utils.tools import (
@@ -262,7 +262,6 @@ async def create(_, m):
     if not check_url(long_url.text):
         return await message.edit_text("Invalid url type!")
     short_url = shorten_url(api, long_url.text)
-    double_url = shorten_url(api, long_url.text, True)
 
     # generate bot start link
     base64_string = Base64.encode((long_url.text).strip())
@@ -272,7 +271,6 @@ async def create(_, m):
     # send link to user
     send_btn = [
         [InlineKeyboardButton("Short Url", url=short_url)],
-        [InlineKeyboardButton("Double Url", url=double_url)],
         [InlineKeyboardButton("Bot Link", url=bot_url)],
         [InlineKeyboardButton("Original Url", url=long_url.text)],
     ]
