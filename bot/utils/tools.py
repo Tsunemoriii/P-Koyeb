@@ -13,6 +13,9 @@ from bot.utils.config import (
     MAIN_CHANNEL_3,
     MAIN_CHANNEL_4,
     MAIN_CHANNEL_5,
+    DOUBLE_SHORT,
+    DOUBLE_SHORT_API,
+    DOUBLE_SHORT_WEB,
 )
 from bot.utils.database import db
 from bot.utils.logger import Logger
@@ -40,7 +43,18 @@ def shorten_url(api: dict, url: str):
         response = requests.get(api_url)
         if response.ok:
             data = json.loads(response.text)
-            return data[get_keydata(api_url)]
+            short_url = data[get_keydata(api_url)]
+            if DOUBLE_SHORT:
+                double_api = DOUBLE_SHORT_WEB.format(DOUBLE_SHORT_API, short_url)
+                resp2 = requests.get(double_api)
+                if response.ok:
+                    data2 = json.loads(response.text)
+                    doubled = data2[get_keydata(double_api)]
+                    return doubled
+                else:
+                    return None
+            else:
+                return short_url
         else:
             return None
     except Exception as e:
