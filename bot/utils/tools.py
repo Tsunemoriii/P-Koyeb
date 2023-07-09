@@ -47,12 +47,12 @@ def shorten_url(api: dict, url: str):
             if DOUBLE_SHORT:
                 double_api = DOUBLE_SHORT_WEB.format(DOUBLE_SHORT_API, short_url)
                 resp2 = requests.get(double_api)
-                if response.ok:
-                    data2 = json.loads(response.text)
+                if resp2.ok:
+                    data2 = json.loads(resp2.text)
                     doubled = data2[get_keydata(double_api)]
                     return doubled
                 else:
-                    return None
+                    return short_url
             else:
                 return short_url
         else:
