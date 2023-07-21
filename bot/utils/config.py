@@ -16,7 +16,7 @@ BOT_TOKEN_4 = os.getenv("BOT_TOKEN_4", "6225070483:AAE6dKan-ump5yNVhXbva1OkAJ0UQ
 BOT_TOKEN_5 = os.getenv("BOT_TOKEN_5", "5990317516:AAEg4lkBRp1WgqWT8b3U6pG1QKTUIas15DQ")
 
 # channel usernames for force subscribe (without @)
-MAIN_CHANNEL = os.environ.get("MAIN_CHANNEL", "Otaku_Hanimes")
+MAIN_CHANNEL = os.environ.get("MAIN_CHANNEL", "HAnime_Club")
 MAIN_CHANNEL_2 = os.getenv("MAIN_CHANNEL_2", "HAnime_Cosplays")
 MAIN_CHANNEL_3 = os.getenv("MAIN_CHANNEL_3", "HAnime_Club")
 MAIN_CHANNEL_4 = os.getenv("MAIN_CHANNEL_4","Channel_No_Four")
