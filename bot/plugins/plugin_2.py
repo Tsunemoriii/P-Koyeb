@@ -219,7 +219,7 @@ async def opensettings(_, m):
             [
                 [
                     InlineKeyboardButton(
-                        f"Tag Forward: {'ON' if await db.get_forward(bot_id) else 'OFF'}",
+                        f"Tag Forward: {'OFF' if await db.get_forward(bot_id) else 'ON'}",
                         callback_data="forwardon",
                     )
                 ],
