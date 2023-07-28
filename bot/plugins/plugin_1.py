@@ -19,7 +19,7 @@ from pyrogram.errors import (
     PeerIdInvalid,
     UserIsBlocked,
 )
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from bot import C1 as cli
 from bot.plugins import help_text_1 as help_text, start_text_1 as start_text
@@ -47,13 +47,17 @@ async def _(cli, cmd):
 
 
 @cli.on_message(
-    filters.user(AUTH_USERS) & filters.private & filters.command("broadcast")
+    filters.user(AUTH_USERS) & filters.private & filters.command(["broadcast", "gcast"])
 )
-async def broadcast_handler_open(_, m):
+async def broadcast_handler_open(_, m: Message):
     if m.reply_to_message is None:
         await m.delete()
     else:
-        await broadcast(m, db)
+        copy = False
+        if len(m.command) > 1:
+            if str(m.command[1]).lower() == "copy":
+                copy = True
+        await broadcast(m, db, copy)
 
 
 @cli.on_message(filters.user(AUTH_USERS) & filters.private & filters.command("del"))
@@ -78,19 +82,18 @@ async def broadcast_handler_close(_, m):
     await x.edit_text(f"Deleted {count} messages.")
 
 
-async def send_msg(user_id, message, broadcast_id):
-    forward = await db.get_forward(bot_id)
+async def send_msg(user_id, message, broadcast_id, copy):
     try:
-        if forward is False:
+        if copy is False:
             _id = await message.forward(chat_id=user_id)
-        elif forward is True:
+        elif copy is True:
             _id = await message.copy(chat_id=user_id)
         _list = [_id.message_id, _id.chat.id]
         broadcast_ids[broadcast_id]["msg_id"].append(_list)
         return 200, None
     except FloodWait as e:
         await asyncio.sleep(e.x)
-        return send_msg(user_id, message)
+        return send_msg(user_id, message, broadcast_id, copy)
     except InputUserDeactivated:
         return 400, f"{user_id} -:- deactivated\n"
     except UserIsBlocked:
@@ -101,7 +104,7 @@ async def send_msg(user_id, message, broadcast_id):
         return 500, f"{user_id} -:- {traceback.format_exc()}\n"
 
 
-async def broadcast(m, db):
+async def broadcast(m, db, copy):
     all_users = await db.get_all_users(bot_id)
     broadcast_msg = m.reply_to_message
     while True:
@@ -127,6 +130,7 @@ async def broadcast(m, db):
                 user_id=int(user["id"]),
                 message=broadcast_msg,
                 broadcast_id=broadcast_id,
+                copy=copy,
             )
             if msg is not None:
                 await broadcast_log_file.write(msg)
@@ -207,22 +211,22 @@ async def sts(_, m):
     )
 
 
-@cli.on_message(filters.user(AUTH_USERS) & filters.command("settings"))
-async def opensettings(_, m):
-    await m.reply_text(
-        f"**Here you can set broadcast settings:**",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        f"Tag Forward: {'OFF' if await db.get_forward(bot_id) else 'ON'}",
-                        callback_data="forwardon",
-                    )
-                ],
-                [InlineKeyboardButton("Close", callback_data="close")],
-            ]
-        ),
-    )
+# @cli.on_message(filters.user(AUTH_USERS) & filters.command("settings"))
+# async def opensettings(_, m):
+#     await m.reply_text(
+#         f"**Here you can set broadcast settings:**",
+#         reply_markup=InlineKeyboardMarkup(
+#             [
+#                 [
+#                     InlineKeyboardButton(
+#                         f"Tag Forward: {'OFF' if await db.get_forward(bot_id) else 'ON'}",
+#                         callback_data="forwardon",
+#                     )
+#                 ],
+#                 [InlineKeyboardButton("Close", callback_data="close")],
+#             ]
+#         ),
+#     )
 
 
 @cli.on_message(
