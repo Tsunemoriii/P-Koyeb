@@ -16,6 +16,7 @@ from bot.utils.config import (
     DOUBLE_SHORT,
     DOUBLE_SHORT_API,
     DOUBLE_SHORT_WEB,
+    ORIGINAL_LINK,
 )
 from bot.utils.database import db
 from bot.utils.logger import Logger
@@ -102,7 +103,10 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
                 "**Seems Like There is Some Issue. Contact @NORMAN_2_2_1_9_4**"
             )
 
-    short_url = shorten_url(api, url)
+    if ORIGINAL_LINK:
+        short_url = url
+    else:
+        short_url = shorten_url(api, url)
 
     # send link to user
     send_btn = [

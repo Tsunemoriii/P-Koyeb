@@ -41,6 +41,9 @@ DOUBLE_SHORT = True    # write False to turn off
 DOUBLE_SHORT_WEB = os.environ.get("DOUBLE_SHORT_WEB", "https://onepagelink.in/api?api={0}&url={1}")
 DOUBLE_SHORT_API = os.environ.get("DOUBLE_SHORT_API", "c75a81ba04af2e8f1bb88ffbb70085305d19f618")
 
+# original link
+ORIGINAL_LINK = False    # write True to send original link
+
 # Fill bot token, main channel, shortener api, shortener web accordingly.
 # bot token 1 will only work with main channel 1 and shortener api 1
 # and shortener web 1 will work with shortener api 1 only.
