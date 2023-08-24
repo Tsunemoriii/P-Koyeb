@@ -97,7 +97,7 @@ async def send_msg(user_id, message, broadcast_id, copy):
         return 200, None
     except FloodWait as e:
         await asyncio.sleep(e.x)
-        return send_msg(user_id, message, broadcast_id, copy)
+        return await send_msg(user_id, message, broadcast_id, copy)
     except InputUserDeactivated:
         return 400, f"{user_id} -:- deactivated\n"
     except UserIsBlocked:
