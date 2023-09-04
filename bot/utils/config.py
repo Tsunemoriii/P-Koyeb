@@ -1,8 +1,8 @@
 import os
 
 
-API_HASH = os.environ.get("API_HASH", "ce54eacb9b6854768b06daa2864e88fa")
-API_ID = int(os.environ.get("API_ID", 4560655))
+API_HASH = os.environ.get("API_HASH", "fc1bce8441f3c90b719bc86098137a3d")
+API_ID = int(os.environ.get("API_ID", 25697264))
 AUTH_USERS = list(filter(lambda x: x, map(int, os.environ.get("AUTH_USERS", "5672065955 1432756163 682111519 1446111611").split())))
 DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://SonicOtakus:otakusonic@cluster0.lfpjg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1001191707498))
