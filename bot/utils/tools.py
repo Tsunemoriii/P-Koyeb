@@ -116,7 +116,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
     if edit:
         try:
             await m.edit_text(
-                text="**Here is Your Requested Link, Click The ''Open Link'' Button Below.**",
+                text="**» Here is Your Requested Link, Click The ''Open Link'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a>**",
                 reply_markup=InlineKeyboardMarkup(send_btn),
             )
         except Exception as e:
@@ -124,7 +124,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
     else:
         try:
             await m.reply_text(
-                text="**Here is Your Requested Link, Click The ''Open Link'' Button Below.**",
+                text="**» Here is Your Requested Link, Click The ''Open Link'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a>**",
                 reply_markup=InlineKeyboardMarkup(send_btn),
             )
         except Exception as e:
