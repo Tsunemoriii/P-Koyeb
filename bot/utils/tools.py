@@ -119,6 +119,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
             await m.edit_text(
                 text="<b><i>» Here is Your Requested Link, Click The ''Open Link'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\nMust Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
                 reply_markup=InlineKeyboardMarkup(send_btn),
+                disable_web_page_preview=True,
             )
         except Exception as e:
             Logger.info(f"[make_short_url edit]: {e}")
@@ -127,6 +128,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
             await m.reply_text(
                 text="<b><i>» Here is Your Requested Link, Click The ''Open Link'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\nMust Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
                 reply_markup=InlineKeyboardMarkup(send_btn),
+                disable_web_page_preview=True,
             )
         except Exception as e:
             Logger.info(f"[make_short_url non-edit]: {e}")
