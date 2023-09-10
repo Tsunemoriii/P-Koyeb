@@ -117,7 +117,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
     if edit:
         try:
             await m.edit_text(
-                text="<b><i>» Here is Your Requested Link, Click The ''Open Link'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\nMust Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
+                text="<b><i>» Here is Your Requested Link, Click The ''<u>Open Link</u>'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\nMust Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
                 reply_markup=InlineKeyboardMarkup(send_btn),
                 disable_web_page_preview=True,
             )
@@ -126,7 +126,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
     else:
         try:
             await m.reply_text(
-                text="<b><i>» Here is Your Requested Link, Click The ''Open Link'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\nMust Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
+                text="<b><i>» Here is Your Requested Link, Click The ''<u>Open Link</u>'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\nMust Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
                 reply_markup=InlineKeyboardMarkup(send_btn),
                 disable_web_page_preview=True,
             )
