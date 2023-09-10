@@ -110,6 +110,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
 
     # send link to user
     send_btn = [
+        [InlineKeyboardButton("Join Backup", url="https://t.me/+oIjQyg8ek3FhNzA1")],
         [InlineKeyboardButton("Open Link", url=short_url)],
     ]
 
@@ -183,11 +184,8 @@ async def forcesub(app, msg, channel: int, data=False, cb=False):
                 if data:
                     buttons = [
                         [InlineKeyboardButton(f"• Join {ch_title} •", url=ch_link)],
-                        [
-                            InlineKeyboardButton(
-                                "• Try Again •", callback_data=f"retry#{data}#{channel}"
-                            )
-                        ],
+                        [InlineKeyboardButton("Join Backup", url="https://t.me/+oIjQyg8ek3FhNzA1")],
+                        [InlineKeyboardButton("• Try Again •", f"retry#{data}#{channel}")],
                     ]
                 else:
                     buttons = [
