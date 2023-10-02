@@ -110,14 +110,14 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
 
     # send link to user
     send_btn = [
-        [InlineKeyboardButton("Join Backup", url="https://t.me/+oIjQyg8ek3FhNzA1")],
-        [InlineKeyboardButton("Open Link", url=short_url)],
+        [InlineKeyboardButton("𝗝𝗼𝗶𝗻 𝗙𝗶𝗹𝗲𝘀 𝗕𝗮𝗰𝗸𝘂𝗽 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/+ZXHf4aROwNdiODg9")],
+        [InlineKeyboardButton("𝗢𝗽𝗲𝗻 𝗟𝗶𝗻𝗸", url=short_url)],
     ]
 
     if edit:
         try:
             await m.edit_text(
-                text="<b><i>» Here is Your Requested Link, Click The ''<u>Open Link</u>'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\n» Must Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
+                text="<b><i>» Here is Your Requested Link, Click The ''<u>Open Link</u>'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\n» Must Send Join Request To <a href='https://t.me/+ZXHf4aROwNdiODg9'>𝗙𝗶𝗹𝗲𝘀 𝗕𝗮𝗰𝗸𝘂𝗽 𝗖𝗵𝗮𝗻𝗻𝗲𝗹</a> To Access All The Files.</i></b>",
                 reply_markup=InlineKeyboardMarkup(send_btn),
                 disable_web_page_preview=True,
             )
@@ -126,7 +126,7 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
     else:
         try:
             await m.reply_text(
-                text="<b><i>» Here is Your Requested Link, Click The ''<u>Open Link</u>'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\n» Must Join <a href='https://t.me/+oIjQyg8ek3FhNzA1'>Backup Channel</a> To Access All The Files.</i></b>",
+                text="<b><i>» Here is Your Requested Link, Click The ''<u>Open Link</u>'' Button Below. \n\n» How To Open? - <a href='https://t.me/Sonic_Club/144'>Watch Tutorial</a> \n\n» Any Other Issues Like 'Username Not Found' <a href='https://t.me/HAnime_Club/233'>Click Here</a> \n\n» Must Send Join Request To <a href='https://t.me/+ZXHf4aROwNdiODg9'>𝗙𝗶𝗹𝗲𝘀 𝗕𝗮𝗰𝗸𝘂𝗽 𝗖𝗵𝗮𝗻𝗻𝗲𝗹</a> To Access All The Files.</i></b>",
                 reply_markup=InlineKeyboardMarkup(send_btn),
                 disable_web_page_preview=True,
             )
@@ -194,7 +194,7 @@ async def forcesub(app, msg, channel: int, data=False, cb=False):
                         [InlineKeyboardButton(f"• Join {ch_title} •", url=ch_link)],
                     ]
                 await msg.reply(
-                    "**You Have Not Joined My Channel Yet. Please Join By Clicking The Button Below**",
+                    "**You Have Not Joined My Channel Yet. Please Join Both By Clicking The Button Below**",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
