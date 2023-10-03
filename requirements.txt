@@ -5,7 +5,8 @@ pyrogram==1.4.0
 Pyromod==1.5
 TgCrypto
 requests
-Flask==2.2.2
+Flask==2.0.1
 gunicorn==20.1.0
 aiohttp==3.8.1
 pymongo[srv]==3.12.3
+Werkzeug==2.2.2
