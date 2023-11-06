@@ -186,13 +186,13 @@ async def forcesub(app, msg, channel: int, data=False, cb=False):
                 if data:
                     buttons = [
                         [InlineKeyboardButton(f"Join {ch_title}", url=ch_link)],
-                        [InlineKeyboardButton("Join Backup", url="https://t.me/+oIjQyg8ek3FhNzA1")],
+                        [InlineKeyboardButton("Join Backup", url="https://t.me/+VZe8-on1I0QyZWI1")],
                         [InlineKeyboardButton("Try Again", f"retry#{data}#{channel}")],
                     ]
                 else:
                     buttons = [
                         [InlineKeyboardButton(f"• Join {ch_title} •", url=ch_link)],
-                        [InlineKeyboardButton("Join Backup", url="https://t.me/+oIjQyg8ek3FhNzA1")],
+                        [InlineKeyboardButton("Join Backup", url="https://t.me/+VZe8-on1I0QyZWI1")],
                         [InlineKeyboardButton("Try Again", f"retry#{data}#{channel}")],
                     ]
                 await msg.reply(
