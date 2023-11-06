@@ -9,7 +9,7 @@ start_text_1 = """
 
 **I Am Link Management Bot For @Hanimes_Otaku**
 
-**> I Will Give You Access To All The Link From @HAnime_Club.**
+**> I Will Give You Access To All The Link From @Hanimes_Otaku.**
 **> You Must Join The Channel To Access The Links.**
 """
 
@@ -33,7 +33,7 @@ start_text_3 = """
 
 **I Am Link Management Bot For @Hanimes_Otaku**
 
-**> I Will Give You Access To All The Link From @HAnime_Club.**
+**> I Will Give You Access To All The Link From @Hanimes_Otaku.**
 **> You Must Join The Channel To Access The Links.**
 """
 
