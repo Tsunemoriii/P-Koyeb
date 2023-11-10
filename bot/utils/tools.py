@@ -110,8 +110,8 @@ async def make_short_url(m, api: dict, url: str, edit: bool = False):
 
     # send link to user
     send_btn = [
-        [InlineKeyboardButton("𝗝𝗼𝗶𝗻 𝗙𝗶𝗹𝗲𝘀 𝗕𝗮𝗰𝗸𝘂𝗽 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/+ZXHf4aROwNdiODg9")],
-        [InlineKeyboardButton("𝗢𝗽𝗲𝗻 𝗟𝗶𝗻𝗸", url=short_url)],
+        [InlineKeyboardButton("𝗝𝗼𝗶𝗻 𝗙𝗶𝗹𝗲𝘀 𝗕𝗮𝗰𝗸𝘂𝗽 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/+AkNhqeu-zSg1ODA1")],
+        [InlineKeyboardButton(">>> 𝗢𝗽𝗲𝗻 𝗟𝗶𝗻𝗸 <<<", url=short_url)],
     ]
 
     if edit:
