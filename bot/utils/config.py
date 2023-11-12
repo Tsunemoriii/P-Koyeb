@@ -30,14 +30,14 @@ SHORTENER_API_4 = os.environ.get("SHORTENER_API_4", "dcddbca543e209dd3f79cfbae6b
 SHORTENER_API_5 = os.environ.get("SHORTENER_API_5", "23eb5dd17ac140282cad623f70635f2ba0820f4d")
 
 # shortener api urls
-SHORTENER_WEB = os.environ.get("SHORTENER_WEB", "https://moneykamalo.com/api?api={0}&url={1}")
+SHORTENER_WEB = os.environ.get("SHORTENER_WEB", "https://onepagelink.in/api?api={0}&url={1}")
 SHORTENER_WEB_2 = os.environ.get("SHORTENER_WEB_2", "https://moneykamalo.com/api?api={0}&url={1}")
-SHORTENER_WEB_3 = os.environ.get("SHORTENER_WEB_3", "https://moneykamalo.com/api?api={0}&url={1}")
+SHORTENER_WEB_3 = os.environ.get("SHORTENER_WEB_3", "https://onepagelink.in/api?api={0}&url={1}")
 SHORTENER_WEB_4 = os.environ.get("SHORTENER_WEB_4", "https://moneykamalo.com/api?api={0}&url={1}")
 SHORTENER_WEB_5 = os.environ.get("SHORTENER_WEB_5", "https://paisakamalo.in/api?api={0}&url={1}")
 
 # double short url and api
-DOUBLE_SHORT = True    # write False to turn off
+DOUBLE_SHORT = False    # write False to turn off
 DOUBLE_SHORT_WEB = os.environ.get("DOUBLE_SHORT_WEB", "https://onepagelink.in/api?api={0}&url={1}")
 DOUBLE_SHORT_API = os.environ.get("DOUBLE_SHORT_API", "c75a81ba04af2e8f1bb88ffbb70085305d19f618")
 
