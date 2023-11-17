@@ -7,9 +7,9 @@ help_text_1 = "**I Am Developed By My Creator @NORMAN_2_2_1_9_4**\n\n**> Contact
 start_text_1 = """
 **Hello!** {mention}
 
-**I Am Link Management Bot For @Hanimes_Otaku**
+**I Am Link Management Bot For @Parody_Domain**
 
-**> I Will Give You Access To All The Link From @Hanimes_Otaku.**
+**> I Will Give You Access To All The Link From @Parody_Domain.**
 **> You Must Join The Channel To Access The Links.**
 """
 
@@ -19,9 +19,9 @@ help_text_2 = "**I Am Developed By My Creator @NORMAN_2_2_1_9_4**\n\n**> Contact
 start_text_2 = """
 **Hello!** {mention}
 
-**I Am Link Management Bot For @HAnime_Cosplays**
+**I Am Link Management Bot For @Domain_3D**
 
-**> I Will Give You Access To All The Link From @HAnime_Cosplays.**
+**> I Will Give You Access To All The Link From @Domain_3D.**
 **> You Must Join The Channel To Access The Links.**
 """
 
