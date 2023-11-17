@@ -9,15 +9,15 @@ LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1001191707498))
 
 
 # Bot tokens
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "6054245957:AAHPD4Rrlt05HpdMEQnRVSjx6AIgJJ35oDE")
-BOT_TOKEN_2 = os.getenv("BOT_TOKEN_2", "6051155351:AAFTIzVQEytmfPAFZX7OCH60hkP3hCmoQE4")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "6819804921:AAHBjuNJPz16bmncqGOAtUlCm6YyXbJ-5fI")
+BOT_TOKEN_2 = os.getenv("BOT_TOKEN_2", "6370098484:AAGpo5-Tmt-NqzvDGMBOzoSWnaLmG-u3ucs")
 BOT_TOKEN_3 = os.getenv("BOT_TOKEN_3", "6722197684:AAExVaNGi0MO1nzY9fi4Sv0nfNl9cpdPcYw")
 BOT_TOKEN_4 = os.getenv("BOT_TOKEN_4", "6917972682:AAFZZx47GWw60zl1JzZ4ryfSWWHaKuKfIME")
 BOT_TOKEN_5 = os.getenv("BOT_TOKEN_5", "6985172423:AAGpV8817eRrxDjF-NUGfuy3FUnoUWr49xU")
 
 # channel usernames for force subscribe (without @)
-MAIN_CHANNEL = os.environ.get("MAIN_CHANNEL", "Hanimes_Otaku")
-MAIN_CHANNEL_2 = os.getenv("MAIN_CHANNEL_2", "Hanimes_Otaku")
+MAIN_CHANNEL = os.environ.get("MAIN_CHANNEL", "Parody_Domain")
+MAIN_CHANNEL_2 = os.getenv("MAIN_CHANNEL_2", "Domain_3D")
 MAIN_CHANNEL_3 = os.getenv("MAIN_CHANNEL_3", "One_Piece_Film_Z_Movie")
 MAIN_CHANNEL_4 = os.getenv("MAIN_CHANNEL_4","One_Piece_Film_Gold_Movie")
 MAIN_CHANNEL_5 = os.getenv("MAIN_CHANNEL_5", "Film_Gold_One_Piece")
