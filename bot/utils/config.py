@@ -37,7 +37,7 @@ SHORTENER_WEB_4 = os.environ.get("SHORTENER_WEB_4", "https://publicearn.com/api?
 SHORTENER_WEB_5 = os.environ.get("SHORTENER_WEB_5", "https://publicearn.com/api?api={0}&url={1}")
 
 # double short url and api
-DOUBLE_SHORT = False    # write False to turn off
+DOUBLE_SHORT = True    # write False to turn off
 DOUBLE_SHORT_WEB = os.environ.get("DOUBLE_SHORT_WEB", "https://link2paisa.com/api?api={0}&url={1}")
 DOUBLE_SHORT_API = os.environ.get("DOUBLE_SHORT_API", "636de537452baa8a215b0813f3dfb1a30ef76278")
 
