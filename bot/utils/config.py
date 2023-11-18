@@ -23,23 +23,23 @@ MAIN_CHANNEL_4 = os.getenv("MAIN_CHANNEL_4","One_Piece_Film_Gold_Movie")
 MAIN_CHANNEL_5 = os.getenv("MAIN_CHANNEL_5", "Film_Gold_One_Piece")
 
 # shortener api keys
-SHORTENER_API = os.environ.get("SHORTENER_API", "60e33b784ffac4382a553666021940b5d777bcd2")
-SHORTENER_API_2 = os.environ.get("SHORTENER_API_2", "60e33b784ffac4382a553666021940b5d777bcd2")
-SHORTENER_API_3 = os.environ.get("SHORTENER_API_3", "60e33b784ffac4382a553666021940b5d777bcd2")
-SHORTENER_API_4 = os.environ.get("SHORTENER_API_4", "60e33b784ffac4382a553666021940b5d777bcd2")
-SHORTENER_API_5 = os.environ.get("SHORTENER_API_5", "60e33b784ffac4382a553666021940b5d777bcd2")
+SHORTENER_API = os.environ.get("SHORTENER_API", "636de537452baa8a215b0813f3dfb1a30ef76278")
+SHORTENER_API_2 = os.environ.get("SHORTENER_API_2", "636de537452baa8a215b0813f3dfb1a30ef76278")
+SHORTENER_API_3 = os.environ.get("SHORTENER_API_3", "636de537452baa8a215b0813f3dfb1a30ef76278")
+SHORTENER_API_4 = os.environ.get("SHORTENER_API_4", "636de537452baa8a215b0813f3dfb1a30ef76278")
+SHORTENER_API_5 = os.environ.get("SHORTENER_API_5", "636de537452baa8a215b0813f3dfb1a30ef76278")
 
 # shortener api urls
-SHORTENER_WEB = os.environ.get("SHORTENER_WEB", "https://publicearn.com/api?api={0}&url={1}")
-SHORTENER_WEB_2 = os.environ.get("SHORTENER_WEB_2", "https://publicearn.com/api?api={0}&url={1}")
-SHORTENER_WEB_3 = os.environ.get("SHORTENER_WEB_3", "https://publicearn.com/api?api={0}&url={1}")
-SHORTENER_WEB_4 = os.environ.get("SHORTENER_WEB_4", "https://publicearn.com/api?api={0}&url={1}")
-SHORTENER_WEB_5 = os.environ.get("SHORTENER_WEB_5", "https://publicearn.com/api?api={0}&url={1}")
+SHORTENER_WEB = os.environ.get("SHORTENER_WEB", "https://link2paisa.com/api?api={0}&url={1}")
+SHORTENER_WEB_2 = os.environ.get("SHORTENER_WEB_2", "https://link2paisa.com/api?api={0}&url={1}")
+SHORTENER_WEB_3 = os.environ.get("SHORTENER_WEB_3", "https://link2paisa.com/api?api={0}&url={1}")
+SHORTENER_WEB_4 = os.environ.get("SHORTENER_WEB_4", "https://link2paisa.com/api?api={0}&url={1}")
+SHORTENER_WEB_5 = os.environ.get("SHORTENER_WEB_5", "https://link2paisa.com/api?api={0}&url={1}")
 
 # double short url and api
 DOUBLE_SHORT = True    # write False to turn off
-DOUBLE_SHORT_WEB = os.environ.get("DOUBLE_SHORT_WEB", "https://link2paisa.com/api?api={0}&url={1}")
-DOUBLE_SHORT_API = os.environ.get("DOUBLE_SHORT_API", "636de537452baa8a215b0813f3dfb1a30ef76278")
+DOUBLE_SHORT_WEB = os.environ.get("DOUBLE_SHORT_WEB", "https://paisakamalo.in/api?api={0}&url={1}")
+DOUBLE_SHORT_API = os.environ.get("DOUBLE_SHORT_API", "73580725087e717aebe1220f1614d8944f208970")
 
 # original link
 ORIGINAL_LINK = False    # write True to send original link
